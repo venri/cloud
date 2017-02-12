@@ -31,6 +31,7 @@ mainClassName = "com.mycompany.eureka.ServiceApplication"
 
 dependencies {
     compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+    compile 'org.mybatis:mybatis:3.2.8'
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
