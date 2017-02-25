@@ -1,0 +1,14 @@
+<!DOCTYPE mapper     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mycompany.service.SubscriberMapper">
+    <resultMap id="subscriber" type="com.mycompany.service.Subscriber">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+    <select resultMap="subscriber"
+                id="getSubscriberById"
+        parameterType="java.lang.Integer"
+        >
+        select * from subscriber where id = #{id}  <!-- поле в фигурных скобках это параметр, который прилетел в метод. Если это Map — то {имя} это ключ к переменной. Если в метод передаем EntityBean то {имя} — это название переменной данного bean.-->
+    </select>
+
+</mapper>

@@ -32,6 +32,8 @@ mainClassName = "com.mycompany.eureka.ServiceApplication"
 dependencies {
     compile 'org.springframework.cloud:spring-cloud-starter-eureka'
     compile 'org.mybatis:mybatis:3.2.8'
+    compile group: 'postgresql', name: 'postgresql', version: '9.3-1102.jdbc41'
+    compile 'org.postgresql:postgresql:9.3-1102.jdbc41'
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 

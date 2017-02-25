@@ -19,9 +19,7 @@
             </dataSource>
         </environment>
     </environments>
-    <mappers><!--в данном блоке необходимо описать маперы, которые используются в проекте-->
-        <mapper class="kz.jazzsoft.mapper.SubscriberMapper"/>
-        <mapper class="kz.jazzsoft.mapper.TariffMapper"/>
-        <mapper class="kz.jazzsoft.mapper.PaymentMapper"/>
+    <mappers>
+        <mapper resource="com/mycompany/service/SubscriberMapper.xml"/>
     </mappers>
 </configuration>

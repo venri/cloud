@@ -3,6 +3,9 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         mavenCentral()
+        flatDir {
+            dirs 'lib'
+        }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
@@ -31,6 +34,9 @@ mainClassName = "com.mycompany.eureka.EurekaApplication"
 
 dependencies {
     compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+// https://mvnrepository.com/artifact/postgresql/postgresql
+//    compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
+
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
