@@ -1,0 +1,42 @@
+group 'com.mycompany'
+version '1.0-SNAPSHOT'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+        classpath "io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+apply plugin: "io.spring.dependency-management"
+
+jar {
+    baseName = 'cache'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = "com.mycompany.cache.CacheApplication"
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+}
+
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.0.7.RELEASE'
+    }
+}
