@@ -1,4 +1,5 @@
 rootProject.name = 'cloud'
 include 'eureka'
 include 'service'
+include 'cache'
 
